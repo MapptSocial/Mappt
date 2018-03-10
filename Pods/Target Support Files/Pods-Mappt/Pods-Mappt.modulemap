@@ -1,0 +1,6 @@
+framework module Pods_Mappt {
+  umbrella header "Pods-Mappt-umbrella.h"
+
+  export *
+  module * { export * }
+}

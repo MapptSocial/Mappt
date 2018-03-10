@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraView" customModule="Mappt" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraBtn" destination="AYM-eQ-sl6" id="4gL-6x-FCD"/>
+                <outlet property="galleryBtn" destination="CUs-TJ-SJY" id="peN-a1-qbC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="youtubeBtn" destination="Fsc-Jf-2Zc" id="TjO-of-izG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fu8-mL-8Zt">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="140"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUs-TJ-SJY">
+                            <rect key="frame" x="19" y="40.5" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="9gI-QM-UBr"/>
+                                <constraint firstAttribute="height" constant="60" id="RUl-0R-IGA"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="15"/>
+                            <state key="normal" image="Choose_gallery">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="gallery:" destination="-1" eventType="touchUpInside" id="Nxv-F8-ncy"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sD-UG-BQA">
+                            <rect key="frame" x="31" y="85" width="37.5" height="15.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="10"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcl-Sv-hzS">
+                            <rect key="frame" x="94" y="64" width="11" height="13"/>
+                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="10"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYM-eQ-sl6">
+                            <rect key="frame" x="120" y="40" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="H5R-at-4LE"/>
+                                <constraint firstAttribute="height" constant="60" id="w9q-jd-ZIk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="15"/>
+                            <state key="normal" image="Choose_camera">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="camera:" destination="-1" eventType="touchUpInside" id="vy7-le-OPf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsc-Jf-2Zc">
+                            <rect key="frame" x="221" y="40" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="EgH-Sx-Pfb"/>
+                                <constraint firstAttribute="width" constant="60" id="qqg-FZ-szA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="15"/>
+                            <state key="normal" image="youtube-logo">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="youtube:" destination="-1" eventType="touchUpInside" id="KAZ-4h-bkI"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt6-xZ-OZL">
+                            <rect key="frame" x="195" y="63.5" width="11" height="13"/>
+                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="10"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Youtube" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrC-uA-cjL">
+                            <rect key="frame" x="230" y="85" width="42" height="15.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="10"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmy-3f-Acg">
+                            <rect key="frame" x="129" y="85" width="42" height="15.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="10"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Fsc-Jf-2Zc" firstAttribute="leading" secondItem="qt6-xZ-OZL" secondAttribute="trailing" constant="15" id="2YB-VG-lOg"/>
+                        <constraint firstItem="AYM-eQ-sl6" firstAttribute="centerX" secondItem="Fu8-mL-8Zt" secondAttribute="centerX" id="DER-3j-y2n"/>
+                        <constraint firstItem="qt6-xZ-OZL" firstAttribute="leading" secondItem="AYM-eQ-sl6" secondAttribute="trailing" constant="15" id="Het-dt-egp"/>
+                        <constraint firstItem="AYM-eQ-sl6" firstAttribute="centerY" secondItem="Fu8-mL-8Zt" secondAttribute="centerY" id="IEc-Rn-gy6"/>
+                        <constraint firstItem="mcl-Sv-hzS" firstAttribute="leading" secondItem="CUs-TJ-SJY" secondAttribute="trailing" constant="15" id="KuB-a9-cwJ"/>
+                        <constraint firstItem="qt6-xZ-OZL" firstAttribute="centerY" secondItem="AYM-eQ-sl6" secondAttribute="centerY" id="Z5n-RC-9an"/>
+                        <constraint firstItem="CUs-TJ-SJY" firstAttribute="centerY" secondItem="mcl-Sv-hzS" secondAttribute="centerY" id="fcy-0h-Mfr"/>
+                        <constraint firstItem="Fsc-Jf-2Zc" firstAttribute="centerY" secondItem="qt6-xZ-OZL" secondAttribute="centerY" id="lZE-Mz-mWZ"/>
+                        <constraint firstItem="mcl-Sv-hzS" firstAttribute="centerY" secondItem="AYM-eQ-sl6" secondAttribute="centerY" id="rmh-9K-E9W"/>
+                        <constraint firstItem="AYM-eQ-sl6" firstAttribute="leading" secondItem="mcl-Sv-hzS" secondAttribute="trailing" constant="15" id="sJn-48-0hq"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Fu8-mL-8Zt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3cU-no-pW9"/>
+                <constraint firstAttribute="trailing" secondItem="Fu8-mL-8Zt" secondAttribute="trailing" id="lZx-kK-aN9"/>
+                <constraint firstItem="Fu8-mL-8Zt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ouq-I4-eLK"/>
+                <constraint firstAttribute="bottom" secondItem="Fu8-mL-8Zt" secondAttribute="bottom" id="ujd-uN-LCl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-357.5" y="-340"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Choose_camera" width="256" height="256"/>
+        <image name="Choose_gallery" width="256" height="256"/>
+        <image name="youtube-logo" width="64" height="64"/>
+    </resources>
+</document>
