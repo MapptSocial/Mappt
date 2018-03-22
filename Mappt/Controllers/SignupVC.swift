@@ -71,7 +71,7 @@ class SignupVC: UIViewController {
     
     func register(_ params: [String: Any]) {
         self.showLoader()
-        ApiClient.shared.registerUser(ApiClient.shared.normalLogin, params: params, completioHandler: { (response) in
+        ApiClient.shared.registerUser(ApiClient.shared.signUp, params: params, completioHandler: { (response) in
             self.dismissLoader()
             print(response)
             
