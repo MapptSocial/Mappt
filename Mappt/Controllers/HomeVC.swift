@@ -129,8 +129,13 @@ class HomeVC: UIViewController, GMSMapViewDelegate {
     
     
     func setupMap() {
-        
-        let camera = GMSCameraPosition.camera(withLatitude: 18.366334, longitude: 73.755962, zoom: 12.0)
+        let camera: GMSCameraPosition
+        if let currentLocation = locationManager.location {
+            camera = GMSCameraPosition.camera(withLatitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude, zoom: 12.0)
+        }
+        else {
+            camera = GMSCameraPosition.camera(withLatitude: 18.366334, longitude: 73.755962, zoom: 12.0)
+        }
         
         self.actualMapView = GMSMapView.map(withFrame: self.mapView.frame, camera: camera)
         self.actualMapView.delegate = self
@@ -206,6 +211,10 @@ extension HomeVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue = locations.first?.coordinate else {
             return
+        }
+        if let actualMapView = actualMapView {
+            let camera = GMSCameraPosition.camera(withLatitude: locValue.latitude, longitude: locValue.longitude, zoom: 12.0)
+            actualMapView.camera = camera
         }
 
         var params: [String: Any] = [
