@@ -345,17 +345,6 @@
                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2M-H9-eIX">
-                                        <rect key="frame" x="163" y="487.5" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="MJl-BI-gUK"/>
-                                            <constraint firstAttribute="width" constant="50" id="ew7-SG-zr7"/>
-                                        </constraints>
-                                        <state key="normal" image="Accept_tick"/>
-                                        <connections>
-                                            <action selector="updateProfile:" destination="WbQ-K8-JAI" eventType="touchUpInside" id="3T0-bB-Mtg"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3gH-Jt-qpf" firstAttribute="trailing" secondItem="vJD-fF-NoB" secondAttribute="trailing" id="25u-9T-c8h"/>
@@ -373,11 +362,9 @@
                                     <constraint firstAttribute="trailing" secondItem="pJr-kL-NmR" secondAttribute="trailing" constant="20" id="T19-ux-CsT"/>
                                     <constraint firstItem="b5O-7J-YSn" firstAttribute="centerX" secondItem="bm2-KL-QWR" secondAttribute="centerX" id="TXs-zJ-n8a"/>
                                     <constraint firstItem="3gH-Jt-qpf" firstAttribute="leading" secondItem="jMV-xA-bBh" secondAttribute="leading" id="UCd-dA-zfA"/>
-                                    <constraint firstItem="p2M-H9-eIX" firstAttribute="centerX" secondItem="KTz-AH-Hh2" secondAttribute="centerX" id="Wy6-qG-ewK"/>
                                     <constraint firstItem="3gH-Jt-qpf" firstAttribute="trailing" secondItem="sZp-8X-o8z" secondAttribute="trailing" id="Ysg-Pd-Pen"/>
                                     <constraint firstItem="3gH-Jt-qpf" firstAttribute="leading" secondItem="b5O-7J-YSn" secondAttribute="trailing" constant="10" id="aAr-QS-FeX"/>
                                     <constraint firstItem="Poc-pD-tBf" firstAttribute="leading" secondItem="JqS-cw-5PC" secondAttribute="leading" id="bfa-fV-Aaq"/>
-                                    <constraint firstAttribute="bottom" secondItem="p2M-H9-eIX" secondAttribute="bottom" constant="33" id="cjW-PN-qQo"/>
                                     <constraint firstItem="pJr-kL-NmR" firstAttribute="centerX" secondItem="3gH-Jt-qpf" secondAttribute="centerX" id="dOo-Cx-XeZ"/>
                                     <constraint firstAttribute="bottom" secondItem="jMV-xA-bBh" secondAttribute="bottom" constant="364" id="fEt-cv-tb3"/>
                                     <constraint firstItem="PxH-5Z-FWN" firstAttribute="centerX" secondItem="gW9-2R-TbV" secondAttribute="centerX" id="fW3-bB-GXX"/>
@@ -2140,7 +2127,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Accept_tick" width="256" height="256"/>
         <image name="Add_place" width="256" height="256"/>
         <image name="Add_plus" width="128" height="128"/>
         <image name="City_building" width="128" height="128"/>
