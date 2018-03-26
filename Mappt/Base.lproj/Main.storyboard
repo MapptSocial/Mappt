@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-x6-ojj" customClass="OutlineLabel" customModule="Mappt" customModuleProvider="target">
-                                        <rect key="frame" x="154.5" y="30.5" width="66.5" height="25.5"/>
+                                        <rect key="frame" x="155" y="30.5" width="66.5" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                         <color key="textColor" red="0.2666666667" green="0.68235294120000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -444,28 +444,13 @@
                                             <constraint firstAttribute="height" constant="40" id="dsR-Ov-UsR"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6Z-av-RNh">
-                                        <rect key="frame" x="327" y="21" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="7P5-jF-ZRr"/>
-                                            <constraint firstAttribute="width" constant="40" id="SeH-sO-l3u"/>
-                                        </constraints>
-                                        <state key="normal" image="earth">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="0zE-TX-B4b" kind="presentation" id="chE-vd-90D"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="F6Z-av-RNh" secondAttribute="trailing" constant="8" id="Dgz-AJ-gEB"/>
                                     <constraint firstItem="PdO-g5-2sj" firstAttribute="width" secondItem="K4m-5x-6c9" secondAttribute="width" multiplier="0.35" id="EqQ-5e-eBD"/>
-                                    <constraint firstItem="F6Z-av-RNh" firstAttribute="top" secondItem="K4m-5x-6c9" secondAttribute="top" constant="21" id="Llf-yZ-Nsc"/>
-                                    <constraint firstItem="PdO-g5-2sj" firstAttribute="centerY" secondItem="F6Z-av-RNh" secondAttribute="centerY" id="O8F-QT-m6j"/>
                                     <constraint firstItem="PdO-g5-2sj" firstAttribute="centerX" secondItem="K4m-5x-6c9" secondAttribute="centerX" id="bBL-Wa-car"/>
                                     <constraint firstAttribute="height" constant="64" id="hsC-Wr-PLi"/>
+                                    <constraint firstItem="PdO-g5-2sj" firstAttribute="top" secondItem="K4m-5x-6c9" secondAttribute="top" constant="21" id="jv1-w1-Vnu"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVf-1N-esA" customClass="DropMenuButton" customModule="Mappt" customModuleProvider="target">
@@ -2168,14 +2153,10 @@
         <image name="Trending_arrow" width="128" height="128"/>
         <image name="Wishlist_wand" width="128" height="128"/>
         <image name="drop-down-arrow" width="64" height="64"/>
-        <image name="earth" width="25" height="25"/>
         <image name="location_pin" width="256" height="256"/>
         <image name="mappt-name-256" width="256" height="77"/>
         <image name="rubbish-bin-delete-button" width="64" height="64"/>
         <image name="states_statue" width="128" height="128"/>
         <image name="world_map" width="128" height="128"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="chE-vd-90D"/>
-    </inferredMetricsTieBreakers>
 </document>
