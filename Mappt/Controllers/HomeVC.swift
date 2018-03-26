@@ -204,7 +204,9 @@ class HomeVC: UIViewController, GMSMapViewDelegate {
 extension HomeVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        guard let locValue = locations.first?.coordinate else {
+            return
+        }
 
         var params: [String: Any] = [
             "latitude": locValue.latitude,

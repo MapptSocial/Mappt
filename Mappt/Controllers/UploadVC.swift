@@ -62,13 +62,10 @@ class UploadVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
     }
 
     @IBAction func createPost(_ sender: UIButton) {
-        
-        if self.textView.text.characters.count > 0 {}else {
-            self.view.makeToast("Write caption", duration: 0.4, position: .bottom)
-            return
-        }
-        if self.imageToShare != nil || self.youtubeUrl.characters.count > 0 {} else {
-            self.view.makeToast("Select Photo from Gallery or Camera/ Select Video", duration: 0.4, position: .bottom)
+        let hasCaption = !textView.text.isEmpty
+        let hasPostContent = imageToShare != nil || !youtubeUrl.isEmpty
+        if !(hasCaption && hasPostContent) {
+            view.makeToast("Add a caption and a photo/video", duration: 0.4, position: .bottom)
             return
         }
         
@@ -88,12 +85,15 @@ class UploadVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
             if type == 0 {
                 self.showLoader()
                 DispatchQueue.global().async {
-                    let imageData = UIImagePNGRepresentation(self.imageToShare!)
-                    self.base64 = (imageData?.base64EncodedString(options: .init(rawValue: 0)))!
-                    DispatchQueue.main.async {
-                        params.updateValue(self.base64, forKey:"source_file")
-                        self.createPostApi(params)
+                    if let imageToShare = self.imageToShare,
+                        let imageData = UIImagePNGRepresentation(imageToShare) {
+                        let encodedImage = imageData.base64EncodedString()
+                        DispatchQueue.main.async {
+                            self.base64 = encodedImage
+                            params.updateValue(self.base64, forKey:"source_file")
+                        }
                     }
+                    self.createPostApi(params)
                 }
             }else {
                 self.showLoader()
@@ -124,7 +124,11 @@ class UploadVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
             locationManager.delegate = self
             locationManager.startUpdatingLocation()
             self.showLoader()
-            loc.getAdress { result in
+            loc.getAddress { result in
+                guard let result = result else {
+                    self.view.makeToast("Unable to get your current location", duration: 0.4, position: .bottom)
+                    return
+                }
                 if let city = result["City"] as? String {
                     
                     let latitude = result["latitude"] as! Double
